@@ -24,7 +24,7 @@ body {
     max-height: 500px;
     max-width: 70%;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.39);
     padding: 20px;
 }
 
@@ -38,6 +38,7 @@ body {
 
 .bottom-intro {
     display: flex;
+    height: 50%;
 }
 
 .description {
