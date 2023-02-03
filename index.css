@@ -4,22 +4,47 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "monserrat-semibold";
+    src: url("fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "monserrat-light";
+    src: url("fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "monserrat-extra-light";
+    src: url("fonts/Montserrat-ExtraLight.ttf");
+}
+
+h3, h1, button {
+    font-family: monserrat-semibold;
+}
+
+p, label, input {
+    font-family: monserrat-light;
+}
+
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background: rgb(158,248,201);
+    background: linear-gradient(135deg, rgba(158,248,201,1) 0%, rgba(36,191,254,1) 50%, rgba(82,55,255,1) 100%);
 }
 
 .results-wrap, .questions-wrap {
-    display: none;
+    /* display: none; */
 }
 
 .card-wrap {
+    background-color: aliceblue;
     margin-top: 18%;
     margin-top: 100px;
-    border: 1px solid red;
     min-height: 500px;
     max-height: 500px;
     max-width: 70%;
@@ -36,21 +61,50 @@ body {
     justify-content: space-between;
 }
 
+.top-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-intro h3 {
+    margin: 20px 0px;
+}
+
+.intro-img-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-img-wrap img {
+    width: 40%;
+}
+
 .bottom-intro {
     display: flex;
-    height: 50%;
+    
 }
 
 .description {
-    border: 1px solid black;
     width: 50%;
     padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.description p {
+    width: 80%;
+    line-height: 20px;
+    text-align: justify;
 }
 
 .signup-intro {
     width: 50%;
-    border: 1px solid blue;
     padding: 0px 10px;
+}
+
+.signup-intro h3 {
+    margin-bottom: 10px;
 }
 
 .signup-intro form {
@@ -61,8 +115,44 @@ body {
 button {
     margin-top: 10px;
     padding: 10px;
+    background-color: #e45656;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    transition: all 0.5s;
+    width: 200px;
 }
 
-button, input {
-    width: 100px;
+input {
+    width: 200px;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #c53d3d;
+}
+
+.error {
+    display: none;
+}
+
+.counter {
+    font-family: monserrat-extra-light;
+}
+
+footer {
+    font-family: monserrat-extra-light;
+    color: white;
+    margin-bottom: 10px;
+}
+
+span {
+    font-family: monserrat-extra-light;
+}
+
+footer a {
+    font-family: monserrat-extra-light;
+    color: #ececec;
 }
