@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="card-wrap">
-        <div class="intro-card-wrap">
+        <div class="intro-card-wrap" id="intro-card-wrap">
             <div class="top-intro">
                 <h1>Vacations Quiz</h1>
                 <h3>Discover where will your next adventure take place?</h3>
@@ -23,16 +23,20 @@
                     <h3>Are you ready to go?</h3>
                     <form>
                         <label>Enter your name:</label>
-                        <div class="error" id="error">you must enter your name</div>
-                        <input >
-                        <button>Let's go</button>
+                        <div class="error" id="error-start"></div>
+                        <input id="name">
                     </form>
+                    <button id="btn">Let's go</button>
                 </div>
             </div>
         </div>
   
         <div class="questions-wrap">
-            <div class="q1">
+            <div class="q1" id="q1">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
                 <div class="counter">1/10</div>
                 <div class="question-prompt">
                     <div class="question-wrap">
@@ -41,30 +45,284 @@
                     <form>
                         <div class="answer-block">
                             <label>Vanilla</label>
-                            <input type="radio" id="miami" name="fav_city">
+                            <input type="radio" id="vanilla" name="fav_ice">
                         </div>
                         <div class="answer-block">
                             <label>Strawberry</label>
-                            <input type="radio" id="miami" name="fav_city">
+                            <input type="radio" id="strawberry" name="fav_ice">
                         </div>
                         <div class="answer-block">
                             <label>Chocolate</label>
-                            <input type="radio" id="miami" name="fav_city">
+                            <input type="radio" id="chocolate" name="fav_ice">
                         </div>
+                        <div class="error" id="error"></div>
                     </form>
-                    <div class="next-btn">
-                        <button>click me</button>
-                    </div>
+                    <button id="btn">Next Question</button>
+                    
                 </div>
-            
+            </div>
+            <div class="q2" id="q2">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">2/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>what type of music would you prefer to listen?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Reggaeton</label>
+                            <input type="radio" id="reggaeton" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Electronic</label>
+                            <input type="radio" id="electronic" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Rock</label>
+                            <input type="radio" id="rock" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q3" id="q3">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">3/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>Left or right?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Left</label>
+                            <input type="radio" id="left" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Right</label>
+                            <input type="radio" id="right" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Center</label>
+                            <input type="radio" id="center" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q4" id="q4">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">4/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>What do you prefer to do?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Walk on a park</label>
+                            <input type="radio" id="walk" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Partying</label>
+                            <input type="radio" id="party" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Stay at home</label>
+                            <input type="radio" id="stay" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q5" id="q5">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">5/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>Favorite food?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Pizza</label>
+                            <input type="radio" id="pizza" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Burgers</label>
+                            <input type="radio" id="burgers" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Salad</label>
+                            <input type="radio" id="salad" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q6" id="q6">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">6/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>Favorite types of movies?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Horror</label>
+                            <input type="radio" id="horror" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Comedy</label>
+                            <input type="radio" id="comedy" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Action</label>
+                            <input type="radio" id="action" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q7" id="q7">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">7/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>What climate do you prefer?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Cold</label>
+                            <input type="radio" id="cold" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Warm</label>
+                            <input type="radio" id="warm" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Any</label>
+                            <input type="radio" id="any" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q8" id="q8">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">8/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>Favorite color?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Blue</label>
+                            <input type="radio" id="blue" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Red</label>
+                            <input type="radio" id="red" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Green</label>
+                            <input type="radio" id="green" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q9" id="q9">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">9/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>Prefer cats or dogs?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Cats</label>
+                            <input type="radio" id="cats" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Dogs</label>
+                            <input type="radio" id="dogs" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Other pet</label>
+                            <input type="radio" id="other" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
+            </div>
+            <div class="q10" id="q10">
+                <div class="top-intro">
+                    <h1>Vacations Quiz</h1>
+                    <h3>Discover where will your next adventure take place?</h3>
+                </div>
+                <div class="counter">10/10</div>
+                <div class="question-prompt">
+                    <div class="question-wrap">
+                        <h3>What would you rather do?</h3>
+                    </div>
+                    <form>
+                        <div class="answer-block">
+                            <label>Run</label>
+                            <input type="radio" id="run" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Listen to ASMR</label>
+                            <input type="radio" id="asmr" name="fav">
+                        </div>
+                        <div class="answer-block">
+                            <label>Meditate</label>
+                            <input type="radio" id="meditate" name="fav">
+                        </div>
+                        <div class="error" id="error"></div>
+                    </form>
+                    <button id="btn">Next Question</button>
+                </div>
             </div>
         </div>
   
         <div class="results-wrap">
-            <div class="miami-result">
+            <div class="miami-result" id="miami">
                 <div class="result-top">
                     <h3>Your result is:</h3>
                     <h3>Miami</h3>
+                    <div class="img-wrap">
+                        <img src="img/ny.png">
+                    </div>
                 </div>
                 <div class="result-bottom">
                     <div>Miami is a beautiful sunny place, with great nightlife and </div>
@@ -74,10 +332,13 @@
                     </div>
                 </div>
             </div>
-            <div class="la-result">
+            <div class="la-result" id="la">
                 <div class="result-top">
                     <h3>Your result is:</h3>
                     <h3>Los Angeles</h3>
+                    <div class="img-wrap">
+                        <img src="img/ny.png">
+                    </div>
                 </div>
                 <div class="result-bottom">
                     <div>Los Angeles is a beautiful sunny place, with great nightlife and </div>
@@ -87,10 +348,13 @@
                     </div>
                 </div>
             </div>
-            <div class="ny-result">
+            <div class="ny-result" id="ny">
                 <div class="result-top">
                     <h3>Your result is:</h3>
                     <h3>New York</h3>
+                    <div class="img-wrap">
+                        <img src="img/ny.png">
+                    </div>
                 </div>
                 <div class="result-bottom">
                     <div>New York is a beautiful sunny place, with great nightlife and </div>

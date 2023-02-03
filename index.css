@@ -37,16 +37,12 @@ body {
     background: linear-gradient(135deg, rgba(158,248,201,1) 0%, rgba(36,191,254,1) 50%, rgba(82,55,255,1) 100%);
 }
 
-.results-wrap, .questions-wrap {
-    /* display: none; */
-}
-
 .card-wrap {
     background-color: aliceblue;
     margin-top: 18%;
     margin-top: 100px;
-    min-height: 500px;
-    max-height: 500px;
+    /* min-height: 500px;
+    max-height: 500px; */
     max-width: 70%;
     border-radius: 10px;
     box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.39);
@@ -57,7 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
     justify-content: space-between;
 }
 
@@ -82,7 +78,7 @@ body {
 
 .bottom-intro {
     display: flex;
-    
+    margin-top: 20px;
 }
 
 .description {
@@ -127,6 +123,8 @@ input {
     width: 200px;
     margin: 5px 0px;
     padding: 5px;
+    border: 1px solid black;
+    border-radius: 6px;
 }
 
 button:hover {
@@ -134,8 +132,28 @@ button:hover {
     background-color: #c53d3d;
 }
 
+.answer-block {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.question-prompt {
+    margin-top: 10px;
+}
+
+.question-wrap {
+    margin: 10px 0px;
+
+}
+
+.counter {
+    text-align: right;
+}
+
 .error {
-    display: none;
+    color: #e45656;
+    font-family: monserrat-semibold;
 }
 
 .counter {
@@ -155,4 +173,10 @@ span {
 footer a {
     font-family: monserrat-extra-light;
     color: #ececec;
+}
+
+
+
+.results-wrap, .q1, .q2, .q3, .q4, .q5, .q6, .q7, .q8, .q9, .q10 { 
+    display: none;
 }

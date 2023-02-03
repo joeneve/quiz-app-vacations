@@ -295,3 +295,169 @@ c) other pet
 a) run
 b) listen to asmr
 c) meditate
+
+
+
+#### complete logistics
+
+<div class="container">
+  <div class="question-block" id="question-block-one">
+    <div class="question-prompt">
+      <div class="question-title">
+        <p>what's your favorite city?</p>
+      </div>
+      <div class="options">
+        <form>
+          <div class="block">
+            <label>Miami</label>
+            <input type="radio" id="miami" name="fav_city">
+          </div>
+          <div class="block">
+            <label>New york</label>
+            <input type="radio" id="newYork" name="fav_city">
+          </div>
+          <div class="block">
+            <label>Los Angeles</label>
+            <input type="radio" id="la" name="fav_city">
+          </div>
+          <div id="error"></div>
+        </form> 
+      </div>
+    </div>
+    <button class="button" id="btn">click me</button>
+  </div>
+  <div class="question-block" id="question-block-two">
+    <div class="question-prompt">
+      <div class="question-title">
+        <p>what's your favorite flavor?</p>
+      </div>
+      <div class="options">
+        <form>
+          <div class="block">
+            <label>Chocolate</label>
+            <input type="radio" id="chocolate" name="fav_city">
+          </div>
+          <div class="block">
+            <label>Vanilla</label>
+            <input type="radio" id="vanilla" name="fav_city">
+          </div>
+          <div class="block">
+            <label>Strawberry</label>
+            <input type="radio" id="strawberry" name="fav_city">
+          </div>
+          <div id="error2"></div>
+        </form> 
+      </div>
+    </div>
+    <button class="button" id="btn">click me</button>
+  </div>
+  <div class="question-block" id="question-block-three">
+    <div class="question-prompt">
+      <div class="question-title">
+        <p>Left or right?</p>
+      </div>
+      <div class="options">
+        <form>
+          <div class="block">
+            <label>Left</label>
+            <input type="radio" id="left" name="fav_city">
+          </div>
+          <div class="block">
+            <label>Right</label>
+            <input type="radio" id="right" name="fav_city">
+          </div>
+          <div class="block">
+            <label>None</label>
+            <input type="radio" id="none" name="fav_city">
+          </div>
+          <div id="error3"></div>
+        </form> 
+      </div>
+    </div>
+    <button class="button" id="btn">click me</button>
+  </div>
+</div>
+
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  border: 1px solid black;
+}
+
+.question-block {
+  width: 300px;
+  border: 1px solid red;
+  padding: 20px;
+}
+
+.options, form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+input[type="radio"] {
+  background-color: black;
+}
+
+#question-block-two, #question-block-three {
+  display: none;
+}
+
+
+let miami = 0;
+let newYork = 0;
+let LosAngeles = 0;
+
+// let answers = {"miami": 0, "newYork": 0, "la": 0};
+
+let btn = document.querySelectorAll("#btn");//need to do a for loop with all the buttons
+
+// btn.addEventListener("click", function() {
+//   check()
+// });
+
+// let buttons = document.querySelectorAll("#btn")
+
+for (let i = 0; i < btn.length; i++) {
+  btn[0].addEventListener("click", () => {
+    check("question-block-one", "question-block-two", "miami", "newYork", "la", "error");
+  });
+  btn[1].addEventListener("click", () => {
+    check("question-block-two", "question-block-three", "chocolate", "vanilla", "strawberry", "error2");
+  });
+  btn[2].addEventListener("click", () => {
+    check("question-block-three", "question-block-one", "left", "right", "none", "error3");
+  });
+}
+
+//this will have a parameters when calling it for the button, 
+//call the buttons and add the parameters for each block
+check = (currentQuestion, nextQuestion, a1, a2, a3, error) => {
+  if (document.getElementById(a1).checked) {//this is a1 
+    miami += 1;
+    console.log("miami: " + miami);
+    document.getElementById(currentQuestion).style.display = "none";//current question
+    document.getElementById(nextQuestion).style.display = "block";//next question
+  }
+  else if (document.getElementById(a2).checked) {
+    newYork += 1;
+    console.log("new york: " + newYork);
+    document.getElementById(currentQuestion).style.display = "none";//current question
+    document.getElementById(nextQuestion).style.display = "block";//next question
+  }
+  else if (document.getElementById(a3).checked) {
+    LosAngeles += 1;
+    console.log("la: " + LosAngeles);
+    document.getElementById(currentQuestion).style.display = "none";//current question
+    document.getElementById(nextQuestion).style.display = "block";//next question
+  }
+  else {
+    document.getElementById(error).innerHTML = "you need to select one";//this is parameter error// can also do a for loop for each error message
+  }
+}
