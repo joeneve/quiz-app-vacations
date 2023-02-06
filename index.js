@@ -6,7 +6,6 @@ function ready() {
     let LosAngeles = 0;
 
     let btn = document.querySelectorAll("#btn")
-    // let name = document.getElementById("name");
 
     validateName = (currentSlide, nextSlide, error) => {
         let name = document.getElementById("name");
@@ -49,17 +48,75 @@ function ready() {
 
 
     //prototype
-    result = (winner) => {//lets see if the parameters work
-        console.log("la: " + LosAngeles);
-        console.log("new york: " + newYork);
-        console.log("miami: " + miami);
+    result = (lastSlide, winner) => {//lets see if the parameters work
+        let resultsWrap = document.getElementById("results-wrap");
+        resultsWrap.style.display = "block";//make the results block visible
+
+        let name = document.getElementById("name");
+        let actualName = name.value
+
+        resultsWrapLength = resultsWrap.children
+        if (resultsWrapLength.length < 4) {
+            let nameHeader = document.createElement("div");
+            nameHeader.setAttribute("class", "result-name");
+            nameHeader.innerHTML = `Congrats ${actualName}`;
+            resultsWrap.prepend(nameHeader);
+        } else {
+        }
+
+        let miamiResult = document.getElementById("miami");
+        let newYorkResult = document.getElementById("ny");
+        let losAngelesResult = document.getElementById("la");
+
+        miamiResult.style.display = "none";
+        newYorkResult.style.display = "none";
+        losAngelesResult.style.display = "none";
+
         if (miami > LosAngeles && miami > LosAngeles) {
-            console.log("MIAMI WINS!!")
+            console.log("MIAMI WINS!!");
+            // winner = miamiResult;
+            winner = "miami";
+            document.getElementById(lastSlide).style.display = "none";//current question
+            document.getElementById(winner).style.display = "block";//next questio
+            //set timeout for the button
+            setTimeout(displayButton, 2000);
         } else if (LosAngeles > miami && LosAngeles > newYork) {
             console.log("LA WINS!!")
-        } else if (newYork > miami && newYork > LosAngeles) {
+            // winner = losAngelesResult;
+            winner = "la";
+            document.getElementById(lastSlide).style.display = "none";//current question
+            document.getElementById(winner).style.display = "block";//next questio
+            //set timeout for the button
+            setTimeout(displayButton, 2000);
+        } else {
             console.log("NEW YORK WINS!!")
+            // winner = newYorkResult;
+            winner = "ny";
+            document.getElementById(lastSlide).style.display = "none";//current question
+            document.getElementById(winner).style.display = "block";//next questio
+            //set timeout for the button
+            setTimeout(displayButton, 2000);
         }
+    }
+
+    displayButton = () => {
+        //for loop to display all of the buttons 
+        let resBtn = document.querySelectorAll("#again-btn");
+        for (let i = 0; i < resBtn.length; i++) {
+            resBtn[i].classList.add("btn-display");
+            resBtn[i].style.opacity = "1";
+            resBtn[i].addEventListener("click", () => {
+                restartButton("results-wrap", "q1");
+            });
+        }
+    }
+
+    restartButton = (resultSlide, firstSlide) => {
+        miami = 0;
+        losAngeles = 0;
+        newYork = 0;
+        document.getElementById(resultSlide).style.display = "none";//current question
+        document.getElementById(firstSlide).style.display = "block";
     }
 
 
@@ -68,34 +125,35 @@ function ready() {
             validateName("intro-card-wrap", "q1", "error-start")//add parameters
         });
         btn[1].addEventListener("click", () => {
-            answer("q1", "q2", "vanilla", "strawberry", "chocolate", "error")//add parameters
+            answer("q1", "q2", "vanilla", "strawberry", "chocolate", "error")
         });
         btn[2].addEventListener("click", () => {
-            answer("q2", "q3", "reggaeton", "electronic", "rock", "error")//add parameters
+            answer("q2", "q3", "reggaeton", "electronic", "rock", "error1")
         });
         btn[3].addEventListener("click", () => {
-            answer("q3", "q4", "left", "right", "center", "error")//add parameters
+            answer("q3", "q4", "left", "right", "center", "error2")
         });
         btn[4].addEventListener("click", () => {
-            answer("q4", "q5", "walk", "party", "stay", "error")//add parameters
+            answer("q4", "q5", "walk", "party", "stay", "error3")
         });
         btn[5].addEventListener("click", () => {
-            answer("q5", "q6", "pizza", "burgers", "salad", "error")//add parameters
+            answer("q5", "q6", "pizza", "burgers", "salad", "error4")
         });
         btn[6].addEventListener("click", () => {
-            answer("q6", "q7", "horror", "comedy", "action", "error")//add parameters
+            answer("q6", "q7", "horror", "comedy", "action", "error5")
         });
         btn[7].addEventListener("click", () => {
-            answer("q7", "q8", "cold", "warm", "any", "error")//add parameters
+            answer("q7", "q8", "cold", "warm", "any", "error6")
         });
         btn[8].addEventListener("click", () => {
-            answer("q8", "q9", "blue", "red", "green", "error")//add parameters
+            answer("q8", "q9", "blue", "red", "green", "error7")
         });
         btn[9].addEventListener("click", () => {
-            answer("q9", "q10", "cats", "dogs", "other", "error")//add parameters
+            answer("q9", "q10", "cats", "dogs", "other", "error8")
         });
         btn[10].addEventListener("click", () => {
-            result()//add parameters
+            answer("q10", "", "run", "asmr", "meditate", "error9");
+            result("q10");
         });
     }
 }

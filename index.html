@@ -1,5 +1,5 @@
 <head>
-    <title>Quiz app</title>
+    <title>Vacations Quiz App</title>
     <meta charset="UTF-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
@@ -84,7 +84,7 @@
                             <label>Rock</label>
                             <input type="radio" id="rock" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error1"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -112,7 +112,7 @@
                             <label>Center</label>
                             <input type="radio" id="center" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error2"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -140,7 +140,7 @@
                             <label>Stay at home</label>
                             <input type="radio" id="stay" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error3"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -168,7 +168,7 @@
                             <label>Salad</label>
                             <input type="radio" id="salad" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error4"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -196,7 +196,7 @@
                             <label>Action</label>
                             <input type="radio" id="action" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error5"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -224,7 +224,7 @@
                             <label>Any</label>
                             <input type="radio" id="any" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error6"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -252,7 +252,7 @@
                             <label>Green</label>
                             <input type="radio" id="green" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error7"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -280,7 +280,7 @@
                             <label>Other pet</label>
                             <input type="radio" id="other" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error8"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
@@ -308,59 +308,65 @@
                             <label>Meditate</label>
                             <input type="radio" id="meditate" name="fav">
                         </div>
-                        <div class="error" id="error"></div>
+                        <div class="error" id="error9"></div>
                     </form>
                     <button id="btn">Next Question</button>
                 </div>
             </div>
         </div>
   
-        <div class="results-wrap">
+        <div class="results-wrap" id="results-wrap">
             <div class="miami-result" id="miami">
                 <div class="result-top">
                     <h3>Your result is:</h3>
-                    <h3>Miami</h3>
+                    <h2>Miami</h2>
                     <div class="img-wrap">
-                        <img src="img/ny.png">
+                        <img src="img/miami.png">
                     </div>
                 </div>
                 <div class="result-bottom">
-                    <div>Miami is a beautiful sunny place, with great nightlife and </div>
+                    <p>Miami is a vibrant city located in the state of Florida in the United States. Known for its beautiful beaches, 
+                        exciting nightlife, and rich cultural heritage, Miami is a popular tourist destination for people from all over the world." </p>
                     <div class="again-section">
                         <h3>do you want to play again?</h3>
-                        <button>click here</button>
+                        <button id="again-btn">click here</button>
                     </div>
                 </div>
             </div>
             <div class="la-result" id="la">
                 <div class="result-top">
                     <h3>Your result is:</h3>
-                    <h3>Los Angeles</h3>
+                    <h2>Los Angeles</h2>
                     <div class="img-wrap">
-                        <img src="img/ny.png">
+                        <img src="img/la.png">
                     </div>
                 </div>
                 <div class="result-bottom">
-                    <div>Los Angeles is a beautiful sunny place, with great nightlife and </div>
+                    <p>LA, or Los Angeles, is a sprawling metropolis located on the coast of California in the United States. 
+                        It is one of the largest cities in the US and is a major center for the entertainment, arts, and technology industries. 
+                        LA is home to many famous landmarks, including the Hollywood sign, Sunset Strip, and the Walk of Fame. It is also a
+                         hub for outdoor recreation, with its sunny beaches and nearby mountains. Overall, LA offers a unique blend of cultural,
+                          natural, and commercial attractions that make it a destination for millions of visitors each year. </p>
                     <div class="again-section">
                         <h3>do you want to play again?</h3>
-                        <button>click here</button>
+                        <button id="again-btn">click here</button>
                     </div>
                 </div>
             </div>
             <div class="ny-result" id="ny">
                 <div class="result-top">
                     <h3>Your result is:</h3>
-                    <h3>New York</h3>
+                    <h2>New York</h2>
                     <div class="img-wrap">
                         <img src="img/ny.png">
                     </div>
                 </div>
                 <div class="result-bottom">
-                    <div>New York is a beautiful sunny place, with great nightlife and </div>
+                    <p>New York is a major center for finance, media, and culture, with some of the world's most iconic 
+                        landmarks, such as the Statue of Liberty and the Empire State Building </p>
                     <div class="again-section">
                         <h3>do you want to play again?</h3>
-                        <button>click here</button>
+                        <button id="again-btn">click here</button>
                     </div>
                 </div>
             </div>
