@@ -125,7 +125,7 @@ function ready() {
             validateName("intro-card-wrap", "q1", "error-start")//add parameters
         });
         btn[1].addEventListener("click", () => {
-            answer("q1", "q2", "vanilla", "strawberry", "chocolate", "error")
+            answer("q1", "q2", "strawberry", "vanilla", "chocolate", "error")
         });
         btn[2].addEventListener("click", () => {
             answer("q2", "q3", "reggaeton", "electronic", "rock", "error1")
@@ -134,16 +134,16 @@ function ready() {
             answer("q3", "q4", "left", "right", "center", "error2")
         });
         btn[4].addEventListener("click", () => {
-            answer("q4", "q5", "walk", "party", "stay", "error3")
+            answer("q4", "q5", "party", "walk", "stay", "error3")
         });
         btn[5].addEventListener("click", () => {
-            answer("q5", "q6", "pizza", "burgers", "salad", "error4")
+            answer("q5", "q6", "salad", "burgers", "pizza", "error4")
         });
         btn[6].addEventListener("click", () => {
             answer("q6", "q7", "horror", "comedy", "action", "error5")
         });
         btn[7].addEventListener("click", () => {
-            answer("q7", "q8", "cold", "warm", "any", "error6")
+            answer("q7", "q8", "warm", "cold", "any", "error6")
         });
         btn[8].addEventListener("click", () => {
             answer("q8", "q9", "blue", "red", "green", "error7")
@@ -152,7 +152,7 @@ function ready() {
             answer("q9", "q10", "cats", "dogs", "other", "error8")
         });
         btn[10].addEventListener("click", () => {
-            answer("q10", "", "run", "asmr", "meditate", "error9");
+            answer("q10", "results-wrap", "run", "asmr", "meditate", "error9");
             result("q10");
         });
     }

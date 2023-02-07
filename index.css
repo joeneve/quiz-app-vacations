@@ -23,6 +23,10 @@ h3, h1, button {
     font-family: monserrat-semibold;
 }
 
+h1 {
+    text-align: center;
+}
+
 p, label, input {
     font-family: monserrat-light;
 }
@@ -196,7 +200,6 @@ button:hover {
     background: repeating-linear-gradient(to bottom right, #9CF7CB 0%, #3324a7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 #again-btn {
@@ -241,6 +244,7 @@ footer {
     font-family: monserrat-extra-light;
     color: white;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 span {
@@ -257,7 +261,14 @@ footer a {
 }
 
 @media (max-width: 800px) {
-   
+    .intro-img-wrap img {
+        width: 70%;
+    }
+
+    .signup-intro {
+        width: 50%;
+        padding: 0px 0px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -269,5 +280,91 @@ footer a {
         padding: 2px;
         margin: 3px 0px;
         border-radius: 3px;
+    }
+
+    .description {
+        width: 50%;
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .top-intro h3 {
+        margin: 20px 0px;
+        font-family: monserrat-light;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        margin: 5px 0px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 6px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #e45656;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        transition: all 0.5s;
+        width: 100%;
+    }
+
+    .description p {
+        width: 100%;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .img-wrap {
+        width: 80%;
+    }
+    
+    .img-wrap img {
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .card-wrap {
+        background-color: aliceblue;
+        margin-top: 10%;
+        margin-top: 3%;
+        /* min-height: 500px;
+        max-height: 500px; */
+        max-height: fit-content;
+        max-width: 90%;
+        border-radius: 10px;
+        box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.39);
+        padding: 10px;
+    }
+
+    .bottom-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .description {
+        width: 100%;
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .signup-intro {
+        width: 100%;
+        margin-top: 5px;
+        padding: 0px 0px;
     }
 }
